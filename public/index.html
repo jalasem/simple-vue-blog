@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vue Blog</title>
+</head>
+<body>
+
+  <main>
+      <h2>Vue Blog</h2>
+      <login v-if="currentView == 'login'" @attempt="tryLogin"></login>
+      <create-post @back="go_home" @create="createPost" v-if="currentView == 'create'"></create-post>
+      <edit-post @back="go_home" @now-edit="edtPost" :the_post="postToEdit" v-if="currentView == 'edit'"></edit-post>
+      <blog-area @edit-post="openEdit" @switch="switchTo" v-if="currentView == 'blog'" @del="delPost" :blogposts="blog.posts"></blog-area>
+  </main>
+
+  <script src="https://unpkg.com/vue"></script>
+  <script src="js/main.js"></script>
+</body>
+</html> 

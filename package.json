@@ -1,0 +1,14 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "just a simple blog with vueJS",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ajala AbdulSamii <kgasta@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.0"
+  }
+}
